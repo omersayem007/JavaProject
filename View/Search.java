@@ -78,7 +78,7 @@ public class Search {
 
     frame.add(searchButton);
 
-    frame.setSize(500, 500);
+    frame.setSize(800, 800);
     frame.setTitle("Search");
     frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
     frame.setLayout(null);
