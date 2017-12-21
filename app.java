@@ -1,6 +1,6 @@
 import View.*;
 
-public class MainClass {
+public class app {
 
 	public static void main(String[] args) {
 		ApplicationFrame.getRef();

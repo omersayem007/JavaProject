@@ -1,6 +1,8 @@
+package View;
 import javax.swing.*;
+import eventHandlers.SignUpEventHandler;
 
-public class LogIn {
+public class  LogIn extends JPanel {
 
     private JTextField name, password;
     private JButton loginButton, signupButton;
@@ -27,13 +29,13 @@ public class LogIn {
         int yCordinate = 100;
 
         //-------------------------------  name -----------------------------------//
-        this.nameField = new JLabel("  Name ");
+        this.nameField = new JLabel("Name");
         this.nameField.setBounds(xCordinate - 40, yCordinate, 100, 30);
-        this.name = new JTextField("  Your name ");
-        this.name = setBounds(xCordinate + 40, yCordinate, 200, 30);
+        this.name = new JTextField("Your name");
+        this.name.setBounds(xCordinate + 40, yCordinate, 200, 30);
 
-        this.add(name);
-        this.add(nameField);
+        this.add(this.name);
+        this.add(this.nameField);
 
         //--------------------------- password ----------------------------//
 
@@ -43,24 +45,25 @@ public class LogIn {
         this.password = new JTextField("  Valid password ");
         this.password.setBounds(xCordinate + 40, yCordinate + 40, 200, 30);
 
-        this.add(passwordField);
-        this.add(password);
+        this.add(this.passwordField);
+        this.add(this.password);
 
         //-----------login button-------//
 
-        this.loginButton = new JButton("  login");
+        this.loginButton = new JButton("login");
         this.loginButton.setBounds(xCordinate + 40, yCordinate + 80, 95, 30);
 
-        this.add(loginButton);
+        this.add(this.loginButton);
 
         //------------SIGNUP BUTTON------///
 
         this.signupButton = new JButton("  Signup");
         this.signupButton.setBounds(xCordinate + 310, yCordinate - 90, 95, 30);
 
-        this.add(signupButton);
+        this.add(this.signupButton);
 
-        frame.setTitle("Login page");
+        this.signupButton.addActionListener(new SignUpEventHandler());
+
 
     }
 
