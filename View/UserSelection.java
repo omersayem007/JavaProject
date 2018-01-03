@@ -1,6 +1,8 @@
 
 package View;
+
 import javax.swing.*;
+import eventHandlers.PartnerSignUpEventHandler;
 
 public class UserSelection extends JPanel {
 
@@ -40,6 +42,8 @@ public class UserSelection extends JPanel {
         this.clientButton = new JButton("  Client");
         this.clientButton.setBounds(xCordinate + 80, yCordinate + 120, 95, 30);
         this.add(this.clientButton);
+
+        this.partnerButton.addActionListener(new PartnerSignUpEventHandler());
 
     }
 
